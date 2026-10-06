@@ -1,0 +1,211 @@
+{
+  "completed": true,
+  "passed": 40,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "Grid lookup and bounds",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Board lookup rejects a block outside the connected parent",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Board lookup excludes inactive blocks",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Board lookup rejects positions between cells",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Board lookup follows current positions after rearrangement",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Board lookup rejects ambiguous overlapping blocks",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Normal damage and untouched neighbours",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Explosion excludes centre from extra damage",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Electric unique targets within range",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Electric seed is reproducible",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Electric uses all two remaining candidates",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Horizontal laser includes centre",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Vertical laser includes centre",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Cross laser damages centre twice additionally",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "HorizontalLaser second hit has no laser",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "VerticalLaser second hit has no laser",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "CrossLaser second hit has no laser",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Laser state is separate for each ball",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Duplicate begin and registration cannot rearm laser",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "New shot resets laser and rejects stale commands",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Invalid hits do not consume first laser hit",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Registration validates type and attack power",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Charge uses actual damage on overkill",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Destroyed gold block has a usable reward snapshot",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Explosion survives direct centre destruction",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Electric survives direct centre destruction",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Laser survives direct centre destruction",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Result includes destruction by immediate laser",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Explosion clips field edges and empty cells",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Attack upgrade applies to direct and area damage",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Additional damage does not chain or duplicate deaths",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Fire timing and delayed reports",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Fire stacks six scheduled ticks on repeated hit",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Fire stops on target death and ignores replacement",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "EndShot cancels fire even inside a damage callback",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "New shot cancels old fire",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Returning one ball does not cancel shared fire",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Pause freezes fire game time",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Disabling controller cancels fire",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Fire does not schedule for directly destroyed target",
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "unityVersion": "6000.5.10f1",
+  "verifiedDateKST": "2026-10-07",
+  "execution": "BallEffectTestHarness.RunAllCases in Unity Editor Play Mode",
+  "integration": "BallBoardLookup uses public GridManager.GetCellPosition and a scoped block parent. Block.cs and GridManager.cs unchanged."
+}
