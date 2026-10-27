@@ -10,6 +10,7 @@ public class GridManager : MonoBehaviour
 
     [SerializeField] private Block blockPrefab;
     [SerializeField] private Transform blockParent;
+    [SerializeField] private GoldManager goldManager;
 
     private readonly Block[,] blocks = new Block[Rows, Columns];
 
@@ -113,7 +114,79 @@ public class GridManager : MonoBehaviour
         block.Initialize(health, isHard, isGold);
 
         blocks[rowIndex, columnIndex] = block;
+        block.Destroyed += HandleBlockDestroyed;
     }
+
+    public bool HasBlockInDangerRow()
+    {
+        for (int column=0; column < Columns; column++)
+        {
+            //Rows는 8이므로 8행의 블럭들을 확인
+            Block block = blocks[Rows - 1, column];
+
+            if(block != null && !block.IsDestroyed)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public bool MoveBlocksDown()
+    {
+        if (HasBlockInDangerRow())
+        {
+            Debug.LogWarning("8행에 벽돌이 있어 하강할 수 없습니다.", this);
+            return false;
+        }
+
+        for(int row =7; row >=2; row--)
+        {
+            for (int column = 1; column <= Columns; column++)
+            {
+                int rowIndex = row - 1;
+                int columnIndex = column - 1;
+
+                Block block = blocks[rowIndex, columnIndex];
+
+                // 기존 칸을 비운다.
+                blocks[rowIndex, columnIndex] = null;
+
+                if (block == null || block.IsDestroyed)
+                    continue;
+
+                // 한 행 아래의 배열 칸에 저장한다.
+                blocks[rowIndex + 1, columnIndex] = block;
+                // 실제 오브젝트도 해당 칸으로 이동한다.
+                Vector2 position = GetCellPosition(row + 1, column);
+
+                block.transform.position = new Vector3(position.x, position.y, block.transform.position.z);
+            }
+
+        }
+
+        return true;
+    }
+
+    private void HandleBlockDestroyed(Block block)
+    {
+        block.Destroyed -= HandleBlockDestroyed;
+
+        int reward = block.MaxHealth / 2 + block.MaxHealth % 2;//파괴 골드=최대 체력의 절반(올림)
+
+        if (block.IsGold)
+            reward *= 2;//골드 속성은 2배
+
+        if(goldManager == null)
+        {
+            Debug.LogError("GoldManager를 연결해주세요.",this);
+            return;
+        }
+
+        goldManager.AddGold(reward);
+    }
+
 
     //2~6개중 선택해 블록을 생성하는 테스트
     [ContextMenu("Test Spawn Turn 1")]
@@ -150,6 +223,21 @@ public class GridManager : MonoBehaviour
                 $"단단함 {block.IsHard}, 골드 {block.IsGold}",
                 block
             );
+        }
+    }
+    //블록 
+    [ContextMenu("Test Move Down")]
+    private void TestMoveDown()
+    {
+        if (!Application.isPlaying)
+            return;
+
+        if (!MoveBlocksDown())
+            return;
+
+        if (HasBlockInDangerRow())
+        {
+            Debug.Log("8행 도달: 부활 또는 게임오버 처리가 필요합니다.", this);
         }
     }
 }
