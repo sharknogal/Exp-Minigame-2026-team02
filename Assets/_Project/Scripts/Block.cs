@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.VFX;
 using TMPro;
+using System;
 
 //블록의 체력을 관리하고, 피해를 받았을 때 파괴 여부를 알려주는 역할
 public class Block : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 10;
     [SerializeField] private TMP_Text healthText;
+
+    public event Action<Block> Destroyed;
 
     //최대체력,현재체력,파괴여부
     public int MaxHealth => maxHealth;
@@ -43,6 +46,7 @@ public class Block : MonoBehaviour
     {
         if (IsDestroyed)
             return true;
+
         if (damage <= 0)
             return false;
 
@@ -59,6 +63,8 @@ public class Block : MonoBehaviour
         {
             blockCollider.enabled = false;
         }
+
+        Destroyed?.Invoke(this);
 
         Destroy(gameObject);
         return true;
