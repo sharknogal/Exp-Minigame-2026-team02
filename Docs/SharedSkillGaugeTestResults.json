@@ -1,0 +1,449 @@
+{
+  "verifiedDate": "2026-10-28",
+  "timezone": "Asia/Seoul",
+  "unityVersion": "6000.5.10f1",
+  "branch": "codex/shared-skill-gauge",
+  "baseCommit": "a67299beb9c2413d31e58e15b6554cc17e423901",
+  "runner": "Custom Play Mode coroutine suites (not NUnit Unity Test Runner)",
+  "gauge": {
+    "completed": true,
+    "passed": 39,
+    "failed": 0,
+    "cases": [
+      {
+        "name": "새 게이지의 초기 상태",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "599에서는 대기하고 정확히 600에서 발동",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "능력 미보유 시 600까지만 저장",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "미보유 때 버린 초과 충전량은 나중에 복원되지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "큰 충전량도 미보유 상태에서는 600으로 제한",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "1250 충전은 두 차례 발동하고 50 유지",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "기존 590에 1250을 더하면 세 차례 발동하고 40 유지",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "첫 능력 구매 중에는 발동하지 않고 다음 발사에 발동",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "발사 종료와 다음 발사 사이에 충전량 유지",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "새 게임은 충전량과 능력 보유 상태를 초기화",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "0과 음수 충전은 무시",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "발사 전과 발사 종료 후 피해 요청은 충전하지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "발사 중 능력 보유 변경은 무시",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "중복 시작과 종료 호출은 충전량을 초기화하지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "UI 비율은 0, 절반, 최대치를 표현",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "각 발동 콜백은 600 소모가 끝난 값을 확인",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "발동 콜백에서 새 게임을 시작하면 이전 발동을 중단",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "발동 콜백에서 발사를 끝내면 남은 발동은 다음 발사로 넘김",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "변경 통지 후 UI가 최종 잔량을 읽을 수 있음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "발동 콜백의 재귀 충전 요청은 다음 능력을 연쇄 발동하지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "일반공의 실제 피해를 한 번만 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "충전공의 이미 계산된 2배를 다시 곱하지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "남은 체력 3의 블록은 일반공으로 3만 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "남은 체력 3의 블록은 충전공으로 6만 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "폭발 피해는 주변 블록의 실제 체력 감소도 합산",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "감전 피해도 실제 체력 감소만 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "가로 레이저 추가 피해도 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "세로 레이저 추가 피해도 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "십자 레이저의 중심 추가 피해 두 번을 모두 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "유효하지 않은 공 적중은 충전하지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "같은 공의 정상적인 재충돌은 각각 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "Configure를 여러 번 호출해도 구독은 한 번",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "게이지 비활성화 중에는 충전하지 않고 재활성화 시 중복 구독 없음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "연결할 공 효과를 바꾸면 이전 효과의 구독을 해제",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "공 효과를 거치지 않은 피해는 게이지에 들어오지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "컨트롤러의 새 게임은 기존 게이지를 초기화",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "화염은 실제 피해 시점에 세 번 더 충전",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "발사 종료 시 남은 화염은 충전하지 않음",
+        "passed": true,
+        "message": "통과"
+      },
+      {
+        "name": "화염이 남은 체력만큼만 충전하고 파괴 후 중단",
+        "passed": true,
+        "message": "통과"
+      }
+    ]
+  },
+  "ballRegression": {
+    "completed": true,
+    "passed": 40,
+    "failed": 0,
+    "cases": [
+      {
+        "name": "Grid lookup and bounds",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Board lookup rejects a block outside the connected parent",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Board lookup excludes inactive blocks",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Board lookup rejects positions between cells",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Board lookup follows current positions after rearrangement",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Board lookup rejects ambiguous overlapping blocks",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Normal damage and untouched neighbours",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Explosion excludes centre from extra damage",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Electric unique targets within range",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Electric seed is reproducible",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Electric uses all two remaining candidates",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Horizontal laser includes centre",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Vertical laser includes centre",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Cross laser damages centre twice additionally",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "HorizontalLaser second hit has no laser",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "VerticalLaser second hit has no laser",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "CrossLaser second hit has no laser",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Laser state is separate for each ball",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Duplicate begin and registration cannot rearm laser",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "New shot resets laser and rejects stale commands",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Invalid hits do not consume first laser hit",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Registration validates type and attack power",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Charge uses actual damage on overkill",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Destroyed gold block has a usable reward snapshot",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Explosion survives direct centre destruction",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Electric survives direct centre destruction",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Laser survives direct centre destruction",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Result includes destruction by immediate laser",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Explosion clips field edges and empty cells",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Attack upgrade applies to direct and area damage",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Additional damage does not chain or duplicate deaths",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Fire timing and delayed reports",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Fire stacks six scheduled ticks on repeated hit",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Fire stops on target death and ignores replacement",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "EndShot cancels fire even inside a damage callback",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "New shot cancels old fire",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Returning one ball does not cancel shared fire",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Pause freezes fire game time",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Disabling controller cancels fire",
+        "passed": true,
+        "failures": []
+      },
+      {
+        "name": "Fire does not schedule for directly destroyed target",
+        "passed": true,
+        "failures": []
+      }
+    ]
+  },
+  "regressionFixtureNote": "The existing BallEffectsTest scene was run with its grid template's GoldManager reference wired only in Play Mode, to match the newly merged teammate reward hook. No existing scene/script/prefab asset was saved or changed.",
+  "manualUiChecks": [
+    {
+      "name": "Actual pointer clicks: Ability On / Off -> Begin Shot -> +1250 Test Charge",
+      "passed": true,
+      "expected": {
+        "charge": 50,
+        "emitted": 2,
+        "received": 2,
+        "chargeLabel": "50 / 600   (8%)",
+        "slider": 0.0833333358
+      }
+    },
+    {
+      "name": "Actual pointer click: Hit Block with normal ball",
+      "passed": true,
+      "expected": {
+        "blockHealth": 90,
+        "charge": 60
+      }
+    },
+    {
+      "name": "Portrait 1080x1920 overlay visual inspection after changing labels",
+      "passed": true,
+      "note": "Background panels prevent accumulated glyphs outside the camera viewport; text/buttons/gauge readable."
+    }
+  ],
+  "exclusions": [
+    "Actual four special-ability attacks",
+    "Ball movement/aiming/launch/collision/reflection/return",
+    "Automatic integration into the shared game scene"
+  ]
+}
