@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0614d0ae9b50543488bfddb5429aedd3, type: 3}
+  m_Name: FireBall
+  m_EditorClassIdentifier: Assembly-CSharp::AugmentData
+  id: 6
+  category: 0
+  rarity: 1
+  displayName: "\uD654\uC5FC\uACF5"
+  description: "\uC9C1\uC811 \uD53C\uD574 A\uB97C \uC900 \uB4A4, \uAC19\uC740 \uBE14\uB85D\uC5D0
+    0.15\uCD08\xB70.30\uCD08\xB70.45\uCD08 \uD6C4 \uAC01\uAC01 A\uC758 \uCD94\uAC00
+    \uD53C\uD574\uB97C \uC900\uB2E4. \uD55C \uBC88 \uC801\uC911\uD558\uBA74 \uCD5C\uB300
+    4A\uC758 \uD53C\uD574\uB97C \uC8FC\uBA70, \uB2E4\uB978 \uBE14\uB85D\uC5D0\uB294
+    \uC801\uC6A9\uD558\uC9C0 \uC54A\uB294\uB2E4."
+  icon: {fileID: 0}

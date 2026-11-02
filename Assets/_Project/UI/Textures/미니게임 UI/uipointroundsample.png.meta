@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 1e6b05fca94f43448bbed9298b5ed0e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -201393900194310296
+    second: uipointroundsample_0
+  - first:
+      213: 1389244091247152563
+    second: uipointroundsample_1
+  - first:
+      213: 7750470196114432567
+    second: uipointroundsample_2
+  - first:
+      213: 7118865891186439118
+    second: uipointroundsample_3
+  - first:
+      213: -7488405139508317409
+    second: uipointroundsample_4
+  - first:
+      213: 8292287673923365475
+    second: uipointroundsample_5
+  - first:
+      213: -6150582665272185366
+    second: uipointroundsample_6
+  - first:
+      213: 8219065851412245322
+    second: uipointroundsample_7
+  - first:
+      213: 4931978699588673631
+    second: uipointroundsample_8
+  - first:
+      213: -5111236878701871116
+    second: uipointroundsample_9
+  - first:
+      213: 8006578890338901913
+    second: uipointroundsample_10
+  - first:
+      213: 5876996275673769271
+    second: uipointroundsample_11
+  - first:
+      213: 7506454548873903376
+    second: uipointroundsample_12
+  - first:
+      213: -8842342326253067222
+    second: uipointroundsample_13
+  - first:
+      213: 5106814657194842706
+    second: uipointroundsample_14
+  - first:
+      213: -3395702224280871714
+    second: uipointroundsample_15
+  - first:
+      213: -2248140275641916981
+    second: uipointroundsample_16
+  - first:
+      213: -7338155417752550430
+    second: uipointroundsample_17
+  - first:
+      213: -6713476564456501877
+    second: uipointroundsample_18
+  - first:
+      213: -485865570287053070
+    second: uipointroundsample_19
+  - first:
+      213: 1231789748444834745
+    second: uipointroundsample_20
+  - first:
+      213: -4200531021950161274
+    second: uipointroundsample_21
+  - first:
+      213: -143259612704868604
+    second: uipointroundsample_22
+  - first:
+      213: 4302239608291302385
+    second: uipointroundsample_23
+  - first:
+      213: 4871283212466895685
+    second: uipointroundsample_24
+  - first:
+      213: -8990855835733750901
+    second: uipointroundsample_25
+  - first:
+      213: -584337672961753330
+    second: uipointroundsample_26
+  - first:
+      213: -2867838866430632119
+    second: uipointroundsample_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: uipointroundsample_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 218
+        width: 117
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867dcf69051843df0800000000000000
+      internalID: -201393900194310296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 217
+        width: 122
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bdc815f326974310800000000000000
+      internalID: 1389244091247152563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 286
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73227a164933f8b60800000000000000
+      internalID: 7750470196114432567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_3
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3ffc78fca4bc260800000000000000
+      internalID: 7118865891186439118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_4
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13b56d6337d31890800000000000000
+      internalID: -7488405139508317409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_5
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a6d8b74bf141370800000000000000
+      internalID: 8292287673923365475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_6
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeda6c237adb4aaa0800000000000000
+      internalID: -6150582665272185366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_7
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b68fa68dcff0270800000000000000
+      internalID: 8219065851412245322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_8
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50a6cc1f78e17440800000000000000
+      internalID: 4931978699588673631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_9
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff391aa32d3119b0800000000000000
+      internalID: -5111236878701871116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_10
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f9ac084151d1f60800000000000000
+      internalID: 8006578890338901913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 229
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73524dd99f84f8150800000000000000
+      internalID: 5876996275673769271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 244
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d7e3c24a84c2860800000000000000
+      internalID: 7506454548873903376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_13
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 15
+        width: 123
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a24e845c080b94580800000000000000
+      internalID: -8842342326253067222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_14
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 10
+        width: 122
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a5bd7afdc0fd640800000000000000
+      internalID: 5106814657194842706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 55
+        width: 100
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc1cb671da00e0d0800000000000000
+      internalID: -3395702224280871714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_16
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 78
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc16d1994500dc0e0800000000000000
+      internalID: -2248140275641916981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_17
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e3404ad682a92a90800000000000000
+      internalID: -7338155417752550430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_18
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d09a752a0f4d2a0800000000000000
+      internalID: -6713476564456501877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_19
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6927a86dbd149f0800000000000000
+      internalID: -485865570287053070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_20
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bba50aff32381110800000000000000
+      internalID: 1231789748444834745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_21
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ee6a87a47b4b5c0800000000000000
+      internalID: -4200531021950161274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_22
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407f01a242a030ef0800000000000000
+      internalID: -143259612704868604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_23
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb91d62120a4bb30800000000000000
+      internalID: 4302239608291302385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_24
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54bb967c5464a9340800000000000000
+      internalID: 4871283212466895685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_25
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 21
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b8754c0401a3380800000000000000
+      internalID: -8990855835733750901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_26
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 21
+        width: 122
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f7c3e7bf304e7f0800000000000000
+      internalID: -584337672961753330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uipointroundsample_27
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 36
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fd755deb36338d0800000000000000
+      internalID: -2867838866430632119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      uipointroundsample_0: -201393900194310296
+      uipointroundsample_1: 1389244091247152563
+      uipointroundsample_10: 8006578890338901913
+      uipointroundsample_11: 5876996275673769271
+      uipointroundsample_12: 7506454548873903376
+      uipointroundsample_13: -8842342326253067222
+      uipointroundsample_14: 5106814657194842706
+      uipointroundsample_15: -3395702224280871714
+      uipointroundsample_16: -2248140275641916981
+      uipointroundsample_17: -7338155417752550430
+      uipointroundsample_18: -6713476564456501877
+      uipointroundsample_19: -485865570287053070
+      uipointroundsample_2: 7750470196114432567
+      uipointroundsample_20: 1231789748444834745
+      uipointroundsample_21: -4200531021950161274
+      uipointroundsample_22: -143259612704868604
+      uipointroundsample_23: 4302239608291302385
+      uipointroundsample_24: 4871283212466895685
+      uipointroundsample_25: -8990855835733750901
+      uipointroundsample_26: -584337672961753330
+      uipointroundsample_27: -2867838866430632119
+      uipointroundsample_3: 7118865891186439118
+      uipointroundsample_4: -7488405139508317409
+      uipointroundsample_5: 8292287673923365475
+      uipointroundsample_6: -6150582665272185366
+      uipointroundsample_7: 8219065851412245322
+      uipointroundsample_8: 4931978699588673631
+      uipointroundsample_9: -5111236878701871116
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -168,23 +168,18 @@ public class GridManager : MonoBehaviour
 
         return true;
     }
-
+    //
     private void HandleBlockDestroyed(Block block)
     {
         block.Destroyed -= HandleBlockDestroyed;
 
-        int reward = block.MaxHealth / 2 + block.MaxHealth % 2;//파괴 골드=최대 체력의 절반(올림)
-
-        if (block.IsGold)
-            reward *= 2;//골드 속성은 2배
-
         if(goldManager == null)
         {
-            Debug.LogError("GoldManager를 연결해주세요.",this);
+            Debug.LogError("GoldManager를 연결해주세요.", this);
             return;
         }
 
-        goldManager.AddGold(reward);
+        goldManager.AddBlockReward(block.MaxHealth, block.IsGold);
     }
 
 
@@ -239,5 +234,15 @@ public class GridManager : MonoBehaviour
         {
             Debug.Log("8행 도달: 부활 또는 게임오버 처리가 필요합니다.", this);
         }
+    }
+
+    [ContextMenu("Test Create Reward Block")]
+    private void TestCreateRewardBlock()
+    {
+        if (!Application.isPlaying)
+            return;
+
+        // 3행 1열에 최대 체력 21인 일반 골드 벽돌 생성
+        CreateBlock(3, 1, 21, false, true);
     }
 }
