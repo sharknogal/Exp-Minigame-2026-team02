@@ -10,10 +10,13 @@ namespace BrickBreaker.Balls
     {
         [SerializeField] private GridManager grid;
         [SerializeField] private Transform blockRoot;
+        [Tooltip("공의 추가 피해 충전 비율. 비워 두면 모든 추가 피해가 100% 충전됩니다.")]
+        [SerializeField] private BallGaugeBalance gaugeBalance;
 
         private readonly Dictionary<int, BallEffectState> balls = new Dictionary<int, BallEffectState>();
         private readonly BallFireScheduler fire = new BallFireScheduler();
         private BallAreaEffects areaEffects;
+        private BallDamageService damage;
         private int latestShotId = -1;
 
         public bool IsShotActive { get; private set; }
@@ -37,8 +40,12 @@ namespace BrickBreaker.Balls
             blockRoot = blocksParent;
             Board = lookup;
             var random = randomSeed.HasValue ? new System.Random(randomSeed.Value) : new System.Random();
-            areaEffects = new BallAreaEffects(Board, random);
+            damage = new BallDamageService(() => gaugeBalance);
+            areaEffects = new BallAreaEffects(Board, random, damage);
         }
+
+        // 실행 중 자산을 교체해도 다음 추가 피해부터 반영한다. 이미 얻은 소수 잔량은 유지한다.
+        public void ConfigureBalance(BallGaugeBalance balance) => gaugeBalance = balance;
 
         public void BeginShot(int shotId)
         {
@@ -74,7 +81,7 @@ namespace BrickBreaker.Balls
             var records = new List<DamageRecord>();
 
             // 좌표는 파괴 전에 확보했고, 직접 피해는 모든 공에 공통으로 한 번만 준다.
-            records.Add(BallDamageService.Apply(target, ball.AttackPower,
+            records.Add(damage.Apply(target, ball.AttackPower,
                 shotId, ball, row, column, true));
             ApplyAdditionalEffect(ball, target, row, column, isFirstHit, records);
 
@@ -120,7 +127,7 @@ namespace BrickBreaker.Balls
                 case BallEffectType.Fire:
                     fire.Schedule(Time.timeAsDouble, latestShotId, ball, target, row, column);
                     break;
-                // 일반공은 추가 효과가 없고, 충전공의 배율은 피해 기록에서 계산한다.
+                // 일반공은 추가 효과가 없고, 충전공의 직접 피해 배율은 피해 처리 시 계산한다.
                 case BallEffectType.Normal:
                 case BallEffectType.Charge:
                     break;
@@ -136,7 +143,7 @@ namespace BrickBreaker.Balls
         private void Update()
         {
             if (IsShotActive && Time.deltaTime > 0f)
-                fire.Tick(Time.timeAsDouble, latestShotId, Publish);
+                fire.Tick(Time.timeAsDouble, latestShotId, damage, Publish);
         }
 
         private void Publish(DamageBatch batch)
@@ -149,6 +156,7 @@ namespace BrickBreaker.Balls
             IsShotActive = false;
             balls.Clear();
             fire.Clear();
+            damage?.EndShot();
         }
 
         private void OnDisable()

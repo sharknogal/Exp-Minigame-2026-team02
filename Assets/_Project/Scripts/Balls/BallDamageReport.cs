@@ -20,7 +20,7 @@ namespace BrickBreaker.Balls
         public bool IsGold { get; }
 
         internal DamageRecord(int shotId, BallEffectState ball, int row, int column,
-            bool isDirect, int requestedDamage, int actualDamage,
+            bool isDirect, int requestedDamage, int actualDamage, long gaugeCharge,
             bool destroyedNow, int maxHealth, bool isGold)
         {
             ShotId = shotId;
@@ -31,7 +31,7 @@ namespace BrickBreaker.Balls
             IsDirect = isDirect;
             RequestedDamage = requestedDamage;
             ActualDamage = actualDamage;
-            GaugeCharge = (long)actualDamage * (ball.Type == BallEffectType.Charge ? 2 : 1);
+            GaugeCharge = gaugeCharge;
             DestroyedNow = destroyedNow;
             MaxHealth = maxHealth;
             IsGold = isGold;

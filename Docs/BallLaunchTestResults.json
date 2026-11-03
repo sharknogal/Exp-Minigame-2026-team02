@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-03",
+  "timezone": "Asia/Seoul",
+  "unity": "6000.5.10f1",
+  "base": "2164309bef3f93dc628ba2f4e1be4940e346c65c",
+  "scene": "Assets/_Project/Scenes/BallLaunchPlaytest.unity",
+  "runner": "Unity Editor Play Mode; synthetic Input System mouse and touch devices, real team components and colliders",
+  "physicalDeviceTested": false,
+  "physics": {
+    "passed": 13,
+    "failed": 0,
+    "cases": [
+      {
+        "name": "좌우 벽 반사에는 가속 없음",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "천장에서는 입사각과 같은 각도로 반사",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "벽과 천장을 동시에 맞는 모서리는 두 축 반전",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "바닥 첫 접점 X를 한 번만 통지",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "살아남은 블록 반사와 분리 중 중복 적중 방지",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "천장을 맞고 되돌아오면 같은 블록을 다시 공격",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "한 스텝에서 파괴 블록을 통과한 뒤 다음 블록에 도달",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "직접 피해를 버틴 블록도 즉시 레이저로 파괴되면 관통",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "피해 알림 수신자가 방금 파괴한 블록도 관통",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "각 공의 가속은 24가 최대이며 새 발사에서는 초기화",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "다른 보드의 블록과 일반 콜라이더는 무시",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "조준 중 실제 콜라이더까지 그리고 1회 반사하되 피해 없음",
+        "message": "",
+        "passed": true
+      },
+      {
+        "name": "이미 종료되거나 교체된 발사의 공은 이동과 피해 중단",
+        "message": "",
+        "passed": true
+      }
+    ]
+  },
+  "balance": "PASS: 10 passed, 0 failed.",
+  "inputAndTurns": "PASS 21 checks: down/zero rejected; 10..170 limits; pause blocks real click and public launch; ChoosingAugment blocks launch; real button click blocked from shooting; mouse hover previews one reflection; passive HUD allows mouse left-down; mouse direction from ball to cursor; second launch blocked during shot; visible recall button returns volley then disables; force recall once before any return; touch must start near ball; drag previews without firing; canceled touch does not fire; touch release fires in finger direction; first ball immediate, two still scheduled; early natural return waits for scheduled balls; recall cancels pending and keeps first return X; 0.04s stagger and all three spawned; observed grant order Normal/Fire/Normal used for actual hits; all natural returns advance exactly once",
+  "previousSuites": {
+    "gauge": {
+      "passed": 39,
+      "failed": 0
+    },
+    "ballEffects": {
+      "passed": 40,
+      "failed": 0
+    },
+    "note": "기존 공 효과 테스트의 GoldManager 및 AugmentInventory 참조는 해당 Play 세션 안에서만 연결했다."
+  },
+  "totals": {
+    "passed": 123,
+    "failed": 0
+  },
+  "visual": "1080x1920 Game view: recall control in top HUD; team gauge clear at bottom. Existing team scene and scripts unchanged."
+}

@@ -8,11 +8,13 @@ namespace BrickBreaker.Balls
     {
         private readonly BallBoardLookup grid;
         private readonly System.Random random;
+        private readonly BallDamageService damage;
 
-        public BallAreaEffects(BallBoardLookup grid, System.Random random)
+        public BallAreaEffects(BallBoardLookup grid, System.Random random, BallDamageService damage)
         {
             this.grid = grid;
             this.random = random;
+            this.damage = damage;
         }
 
         public void ApplyExplosion(int row, int column, int shotId,
@@ -71,7 +73,7 @@ namespace BrickBreaker.Balls
         private void DamageCell(int row, int column, int amount, int shotId,
             BallEffectState ball, List<DamageRecord> records)
         {
-            DamageRecord record = BallDamageService.Apply(
+            DamageRecord record = damage.Apply(
                 grid.GetBlock(row, column), amount, shotId, ball, row, column, false);
 
             if (record != null)

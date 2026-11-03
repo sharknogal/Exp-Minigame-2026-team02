@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf694b3f067b9546a07dcdf93c604e9, type: 3}
+  m_Name: BallGaugeBalance
+  m_EditorClassIdentifier: Assembly-CSharp::BrickBreaker.Balls.BallGaugeBalance
+  explosionPercent: 100
+  electricPercent: 100
+  horizontalLaserPercent: 100
+  verticalLaserPercent: 100
+  crossLaserPercent: 100
+  firePercent: 100

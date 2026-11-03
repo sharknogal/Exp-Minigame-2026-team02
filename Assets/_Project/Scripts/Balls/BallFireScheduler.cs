@@ -32,7 +32,7 @@ namespace BrickBreaker.Balls
             }
         }
 
-        public void Tick(double now, int activeShotId, Action<DamageBatch> report)
+        public void Tick(double now, int activeShotId, BallDamageService damage, Action<DamageBatch> report)
         {
             pending.RemoveAll(item => item.ShotId != activeShotId ||
                 item.Target == null || item.Target.IsDestroyed);
@@ -42,7 +42,7 @@ namespace BrickBreaker.Balls
                 PendingDamage next = pending[0];
                 pending.RemoveAt(0);
 
-                DamageRecord record = BallDamageService.Apply(next.Target,
+                DamageRecord record = damage.Apply(next.Target,
                     next.Ball.AttackPower, next.ShotId, next.Ball, next.Row, next.Column, false);
 
                 if (record == null)
