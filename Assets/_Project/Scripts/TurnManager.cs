@@ -8,11 +8,13 @@ public class TurnManager: MonoBehaviour
         Aiming, // 조준과 구매가 가능한 단계
         Shooting, // 공 발사부터 모든 공 회수까지
         Resolving, // 하강.생성.패배 판정을 처리하는 단계
-        GameOver // 게임 종료
+        GameOver, // 게임 종료
+        ChoosingAugment // 증강 선택 상태
     }
 
     [SerializeField] private GridManager gridManager;
     [SerializeField] private GoldManager goldManager;
+    [SerializeField] private AugmentInventory augmentInventory;
 
     public int CurrentTurn { get; private set; } //현재 턴 번호를 저장
     public TurnState State { get; private set; } = TurnState.Idle;//현재 상태를 저장 Idle로 시작
@@ -34,7 +36,15 @@ public class TurnManager: MonoBehaviour
             return;
         }
 
+        if (augmentInventory == null)
+        {
+            Debug.LogWarning("AugmentInventory를 연결해주세요.", this);
+            return;
+        }
+
         goldManager.BeginGame();//시작 골드와 점수 설정
+        augmentInventory.BeginGame(); //증강 초기 상태 설정
+
         CurrentTurn = 1;//현재 턴을 1로 설정
         gridManager.SpawnNewRow(CurrentTurn);//GridManager에 1턴 벽돌 생성을 요청
 
@@ -45,10 +55,13 @@ public class TurnManager: MonoBehaviour
 
     public void BeginShot()// 발사 단계 시작
     {
+        if (Time.timeScale == 0f) //일시정지시
+            return;
+
         if (State != TurnState.Aiming)
             return;
 
-        goldManager.LockInterest();
+        goldManager.LockInterest();//발사 시 보유 골드 기준으로 이자 결정
 
         State = TurnState.Shooting;
 
@@ -93,6 +106,23 @@ public class TurnManager: MonoBehaviour
         Debug.Log($"{CurrentTurn}턴: 조준 시작", this);
 
         
+    }
+
+    public bool BeginAugmentSelection()
+    {
+        if (State != TurnState.Aiming)
+            return false;
+
+        State = TurnState.ChoosingAugment;
+        return true;
+    }
+
+    public void CompleteAugmentSelection()
+    {
+        if (State != TurnState.ChoosingAugment)
+            return;
+
+        State = TurnState.Aiming;
     }
 
     [ContextMenu("Test Begin Game")]

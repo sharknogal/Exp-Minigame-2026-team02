@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class GoldManager : MonoBehaviour
 {
+
+    [SerializeField] private AugmentInventory augmentInventory;//이자 증가 증강을 몇번 획득했는지 조회하기 위해 가져옴
+
     public int Gold { get; private set; } //보유 골드
     public int Score { get; private set; } // 점수
     public int PendingInterest { get; private set; } // 이자
@@ -30,8 +33,26 @@ public class GoldManager : MonoBehaviour
 
     public void LockInterest()
     {
-        PendingInterest = Mathf.Min(Gold / 10, 5);//이자=보유 골드 10당 1골드,최대 5골드
+        if (augmentInventory == null)
+        {
+            PendingInterest = 0;
+            Debug.LogError("AugmentInventory를 연결해주세요.", this);
+            return;
+        }
 
+        if(Gold < 10)
+        {
+            PendingInterest = 0;
+        }
+        else
+        {
+            int baseInterst = Mathf.Min(Gold / 10, 5); //기본 이자
+
+            int bonusInterest = augmentInventory.GetOwnedCount(AugmentId.InterestUp);//획득한 이자 증가 증강당 추가 이자
+
+            PendingInterest = baseInterst + bonusInterest;// 총 이자
+        }
+   
         Debug.Log(
         $"발사 시 골드: {Gold}, 다음 턴 이자: {PendingInterest}",
         this
@@ -66,6 +87,39 @@ public class GoldManager : MonoBehaviour
         this);
 
         return true;
+    }
+
+    //블록 파괴 보상 구현
+    public void AddBlockReward(int maxHealth, bool isGold)
+    {
+        if (maxHealth <= 0)
+            return;
+
+        if(augmentInventory == null)
+        {
+            Debug.LogError("AugmentInventory를 연결해주세요.", this);
+            return;
+        }
+
+        int baseReward = Mathf.CeilToInt(maxHealth / 2f);//B = 올림(블록 최대 체력 ÷ 2)
+
+        int count = augmentInventory.GetOwnedCount(AugmentId.DestructionGoldUp);
+
+        int percent = 100 + 10 * count;
+
+        int reward = Mathf.CeilToInt(baseReward * (percent / 100f)); //G = 올림[B × (100 + 10 × n) ÷ 100]
+
+        if (isGold)
+            reward *= 2;//골드 속성의 블록은 2배
+
+        AddGold(reward);
+    }
+
+    [ContextMenu("Test Add 100 Gold")]
+    private void TestAdd100Gold()
+    {
+        if (Application.isPlaying)
+            AddGold(100);
     }
 
     [ContextMenu("Test Spend 40 Gold")]
